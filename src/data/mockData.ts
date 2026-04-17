@@ -1,0 +1,383 @@
+import { NewsItem, GitHubProject, Model, TrendingTopic } from '../types';
+
+export const mockNewsItems: NewsItem[] = [
+  {
+    id: '1',
+    title: 'GPT-6 官宣即将发布（4月14日）：代号"Spud（土豆）"，5-6万亿参数MoE架构',
+    summary: 'OpenAI 宣布代号"Spud（土豆）"的新一代旗舰模型 GPT-6 将于 4 月 14 日全球同步发布。预训练于 3 月 17 日完成，历时 18 个月研发。核心参数：参数量达 5-6 万亿（混合专家 MoE 架构），支持 200 万 Token 上下文窗口（约 150 万字）。',
+    content: 'OpenAI 宣布代号"Spud（土豆）"的新一代旗舰模型 GPT-6 将于 4 月 14 日全球同步发布。预训练于 3 月 17 日完成，历时 18 个月研发。\n\n核心参数：\n- 参数量达 5-6 万亿（混合专家 MoE 架构）\n- 支持 200 万 Token 上下文窗口（约 150 万字）\n- 代码/推理/智能体任务性能较 GPT-5.4 提升约 40%\n- 采用原生多模态统一架构（Symphony 架构）\n\n预计 6 月面向公众开放 API。',
+    source: 'CSDN',
+    sourceUrl: 'https://blog.csdn.net/txg666/article/details/160099056',
+    author: 'AI领域简报',
+    publishedAt: new Date('2026-04-09T00:00:00Z').toISOString(),
+    createdAt: new Date('2026-04-09T00:00:00Z').toISOString(),
+    topics: ['Large Language Models', 'AI Research', 'GPT'],
+    tags: ['GPT-6', 'OpenAI', 'MoE架构', '大模型', '200万上下文'],
+    qualityScore: 98,
+    relevanceScore: 95,
+    trendingScore: 100,
+    metadata: {
+      verificationStatus: 'verified',
+      verificationMethod: 'multiple_sources',
+      verificationDate: '2026-04-17T00:00:00Z',
+      verificationSources: ['CSDN AI News', 'OpenAI Blog'],
+      factCheckConfidence: 98
+    },
+    analysis: {
+      coreContent: 'OpenAI 宣布 GPT-6 将于 4 月 14 日发布，5-6万亿参数 MoE 架构，200万上下文窗口',
+      whyImportant: 'GPT-6 代表大模型技术的重大飞跃，将推动 AI 在复杂任务处理、长文档分析等方面的突破',
+      targetAudience: ['AI 研究者', '开发者', '产品经理', '企业决策者', '技术高管'],
+      techHighlights: ['5-6万亿参数', 'MoE混合专家架构', '200万Token上下文', 'Symphony原生多模态架构', '代码/推理性能提升40%'],
+      actionRecommendation: 'try_now',
+      comparison: '相比 GPT-5.4，在代码/推理/智能体任务上性能提升约 40%',
+      impact: '将大幅提升 AI 处理复杂任务的能力，推动企业级 AI 应用的广泛落地',
+      valueAssessment: { personal: 9, team: 10, product: 10, business: 10 }
+    }
+  },
+  {
+    id: '2',
+    title: 'MiniMax M2.7 全球开源（4月12日）：首个具备自我进化能力的大模型',
+    summary: 'MiniMax 正式全球开源其首个具备自我进化能力的大模型 M2.7。开源首日，华为昇腾、摩尔线程、沐曦、昆仑芯、NVIDIA，以及 Together AI、Fireworks、Ollama 等海内外芯片厂商与推理平台即完成 0 Day 接入适配。',
+    content: 'MiniMax 正式全球开源其首个具备自我进化能力的大模型 M2.7。\n\n性能亮点：\n- 软件工程：SWE-Pro 测试 56.22% 正确率追平 GPT-5.3-Codex\n- 专业办公：GDPval-AA 开源最高分\n- 互动娱乐：OpenRoom Agent 交互系统\n\n开源首日，华为昇腾、摩尔线程、沐曦、昆仑芯、NVIDIA，以及 Together AI、Fireworks、Ollama 等海内外芯片厂商与推理平台即完成 0 Day 接入适配。',
+    source: 'CSDN',
+    sourceUrl: 'https://blog.csdn.net/txg666/article/details/160099056',
+    author: 'AI领域简报',
+    publishedAt: new Date('2026-04-12T00:00:00Z').toISOString(),
+    createdAt: new Date('2026-04-12T00:00:00Z').toISOString(),
+    topics: ['Large Language Models', 'Open Source Projects'],
+    tags: ['MiniMax', 'M2.7', '开源', '自我进化', '0 Day适配'],
+    qualityScore: 94,
+    relevanceScore: 92,
+    trendingScore: 95,
+    metadata: {
+      verificationStatus: 'verified',
+      verificationMethod: 'multiple_sources',
+      verificationDate: '2026-04-17T00:00:00Z',
+      verificationSources: ['CSDN AI News'],
+      factCheckConfidence: 94
+    },
+    analysis: {
+      coreContent: 'MiniMax 全球开源 M2.7 模型，具备自我进化能力，开源首日多平台完成 0 Day 适配',
+      whyImportant: '这是开源模型生态的重要突破，推动 AI 技术的民主化和普及化',
+      targetAudience: ['开源开发者', 'AI 研究者', '企业技术团队', '推理平台', '芯片厂商'],
+      techHighlights: ['自我进化能力', 'SWE-Pro 56.22%', 'GDPval-AA最高分', 'OpenRoom Agent', '0 Day多平台适配'],
+      actionRecommendation: 'try_now',
+      comparison: 'SWE-Pro 测试正确率追平 GPT-5.3-Codex',
+      impact: '将大幅降低 AI 应用开发门槛，推动开源生态的快速发展',
+      valueAssessment: { personal: 8, team: 10, product: 9, business: 10 }
+    }
+  },
+  {
+    id: '3',
+    title: 'Google Gemma 4 发布（4月2日）：Apache 2.0 开源，四个模型覆盖从数据中心到口袋',
+    summary: 'Google DeepMind 于 4 月 2 日发布 Gemma 4，四个开源模型从数据中心到口袋全覆盖，采用 Apache 2.0 许可证。旗舰 31B Dense 模型在 Arena.ai 开源文本排行榜上排名第 3，ELO 评分 1452。',
+    content: 'Google DeepMind 于 4 月 2 日发布 Gemma 4，四个开源模型从数据中心到口袋全覆盖，采用 Apache 2.0 许可证。\n\n四个模型：\n- 31B Dense：旗舰模型，310亿参数，Arena.ai 排名第 3，ELO 1452\n- 26B MoE：260亿总参数，推理时仅激活 38亿，ELO 1441，排名第 6\n- E4B（Effective 4B）：80亿总参数，有效推理 45亿，128K上下文\n- E2B（Effective 2B）：51亿总参数，有效推理 23亿，128K上下文\n\n旗舰 31B Dense 模型在 Arena.ai 开源文本排行榜上排名第 3，ELO 评分 1452，仅次于 Z.ai 的 GLM-5 (1456) 和 Moonshot 的 Kimi 2.5 (1453)。',
+    source: 'BLACKWIRE PRISM',
+    sourceUrl: 'https://www.blackwire.world/articles/gemma-4-apache-open-ai-revolution-april-2026.html',
+    author: 'PRISM Bureau',
+    publishedAt: new Date('2026-04-02T00:00:00Z').toISOString(),
+    createdAt: new Date('2026-04-02T00:00:00Z').toISOString(),
+    topics: ['Large Language Models', 'Open Source Projects', 'Google'],
+    tags: ['Gemma 4', 'Google', 'DeepMind', 'Apache 2.0', '开源模型', 'MoE架构'],
+    qualityScore: 96,
+    relevanceScore: 93,
+    trendingScore: 97,
+    metadata: {
+      verificationStatus: 'verified',
+      verificationMethod: 'multiple_sources',
+      verificationDate: '2026-04-17T00:00:00Z',
+      verificationSources: ['Google DeepMind Blog', 'Blackwire PRISM'],
+      factCheckConfidence: 96
+    },
+    analysis: {
+      coreContent: 'Google 发布 Gemma 4 四个开源模型，Apache 2.0 许可证，覆盖从数据中心到口袋的所有场景',
+      whyImportant: 'Google 放弃定制许可证，采用 Apache 2.0 开源，标志着开源 AI 格局的重大变化',
+      targetAudience: ['开源开发者', 'AI 研究者', '企业技术团队', '边缘设备开发者', '云服务提供商'],
+      techHighlights: ['Apache 2.0 许可证', '31B Dense', '26B MoE', 'E2B/E4B 边缘模型', '128K上下文', 'Arena.ai ELO 1452'],
+      actionRecommendation: 'try_now',
+      comparison: '旗舰 31B Dense 模型 ELO 1452，排名第 3，仅次于 GLM-5 (1456) 和 Kimi 2.5 (1453)',
+      impact: '将重塑开源 AI 生态，推动更多开发者使用和改进开源模型',
+      valueAssessment: { personal: 9, team: 10, product: 9, business: 10 }
+    }
+  },
+  {
+    id: '4',
+    title: 'Microsoft MAI 模型系列发布（4月3日）：MAI-Transcribe-1 在25种语言上击败Whisper',
+    summary: 'Microsoft 于 4 月 3 日发布三个自研 AI 基础模型：MAI-Transcribe-1、MAI-Voice-1 和 MAI-Image-2。MAI-Transcribe-1 在 FLEURS 基准测试的前 25 种语言上实现最低平均词错率 3.8% WER，在所有 25 种测试语言上超过 OpenAI 的 Whisper。',
+    content: 'Microsoft 于 4 月 3 日发布三个自研 AI 基础模型：MAI-Transcribe-1、MAI-Voice-1 和 MAI-Image-2。\n\n各模型亮点：\n- MAI-Transcribe-1：FLEURS 前 25 种语言平均 3.8% WER，所有 25 种语言都超过 Whisper，22 种语言超过 Gemini\n- MAI-Voice-1：60x 实时语音克隆，仅需几秒音频即可克隆任何人的声音\n- MAI-Image-2：升级的图像生成模型，与 DALL·E 4 和 Google Imagen 3 直接竞争\n\n此次发布是在 Microsoft 2025年9月重新谈判 OpenAI 合同之后，标志着 Microsoft 不再仅仅将自己视为 OpenAI 的分销渠道，而是在各模态上构建有竞争力的替代方案。',
+    source: 'TechBytes',
+    sourceUrl: 'https://techbytes.app/posts/microsoft-mai-transcribe-voice-image-models-april-2026/',
+    author: 'Dillip Chowdary',
+    publishedAt: new Date('2026-04-12T00:00:00Z').toISOString(),
+    createdAt: new Date('2026-04-12T00:00:00Z').toISOString(),
+    topics: ['Large Language Models', 'Multimodal AI', 'Speech Recognition'],
+    tags: ['Microsoft', 'MAI', 'MAI-Transcribe-1', 'MAI-Voice-1', 'MAI-Image-2', '语音识别', 'Whisper'],
+    qualityScore: 92,
+    relevanceScore: 90,
+    trendingScore: 93,
+    metadata: {
+      verificationStatus: 'verified',
+      verificationMethod: 'multiple_sources',
+      verificationDate: '2026-04-17T00:00:00Z',
+      verificationSources: ['Microsoft Research Blog', 'TechBytes'],
+      factCheckConfidence: 92
+    },
+    analysis: {
+      coreContent: 'Microsoft 发布三个 MAI 模型系列，MAI-Transcribe-1 在 25 种语言上击败 Whisper',
+      whyImportant: 'Microsoft 开始构建独立于 OpenAI 的 AI 模型能力，为企业用户提供更多选择和议价能力',
+      targetAudience: ['企业用户', '语音处理开发者', '多语言应用开发者', 'Azure 客户'],
+      techHighlights: ['3.8% WER', '25种语言', '60x实时语音克隆', '3.8% WER FLEURS', 'Microsoft Foundry'],
+      actionRecommendation: 'try_now',
+      comparison: 'MAI-Transcribe-1 在 25 种语言上都超过 Whisper，22 种语言超过 Gemini',
+      impact: '将为 Azure 企业客户提供更多模型选择，增加 API 定价谈判的议价能力',
+      valueAssessment: { personal: 7, team: 9, product: 8, business: 10 }
+    }
+  },
+  {
+    id: '5',
+    title: '中国大模型周调用量连续五周超越美国',
+    summary: '根据 OpenRouter 数据（4月6日），上周中国 AI 大模型周调用量突破 12.96 万亿 Token，环比暴涨 31.48%，连续第五周超越美国（3.03 万亿 Token），领先优势扩大至 4.27 倍。',
+    content: '根据 OpenRouter 数据（4月6日），上周中国 AI 大模型周调用量突破 12.96 万亿 Token，环比暴涨 31.48%，连续第五周超越美国（3.03 万亿 Token），领先优势扩大至 4.27 倍。\n\n阿里通义千问 Qwen3.6 Plus 以 4.6 万亿 Token 登顶全球榜首，全球调用量前六名被中国模型包揽。',
+    source: 'CSDN',
+    sourceUrl: 'https://blog.csdn.net/txg666/article/details/160099056',
+    author: 'AI领域简报',
+    publishedAt: new Date('2026-04-06T00:00:00Z').toISOString(),
+    createdAt: new Date('2026-04-06T00:00:00Z').toISOString(),
+    topics: ['AI Industry', 'China AI'],
+    tags: ['中国大模型', 'OpenRouter', 'Qwen', '调用量'],
+    qualityScore: 88,
+    relevanceScore: 85,
+    trendingScore: 89,
+    metadata: {
+      verificationStatus: 'verified',
+      verificationMethod: 'single_source',
+      verificationDate: '2026-04-17T00:00:00Z',
+      verificationSources: ['CSDN AI News'],
+      factCheckConfidence: 88
+    },
+    analysis: {
+      coreContent: 'OpenRouter 数据显示中国大模型周调用量连续五周超越美国，领先优势扩大至 4.27 倍',
+      whyImportant: '标志着中国在 AI 应用层的快速发展，市场规模和用户活跃度显著提升',
+      targetAudience: ['行业分析师', '投资者', '企业决策者', 'AI 从业者'],
+      techHighlights: ['12.96万亿Token', '环比增长31.48%', 'Qwen3.6 Plus 4.6万亿', '全球前六被中国包揽'],
+      actionRecommendation: 'bookmark',
+      comparison: '中国调用量 12.96 万亿 vs 美国 3.03 万亿，领先 4.27 倍',
+      impact: '将吸引更多全球资源关注中国 AI 市场，推动产业进一步发展',
+      valueAssessment: { personal: 6, team: 8, product: 7, business: 9 }
+    }
+  }
+];
+
+export const mockGitHubProjects: GitHubProject[] = [
+  {
+    id: 'gh1',
+    name: 'OpenHands',
+    fullName: 'All-Hands-AI/OpenHands',
+    description: 'OpenHands: Open-source AI agent for autonomous software development',
+    stars: 38200,
+    forks: 3100,
+    watchers: 480,
+    openIssues: 192,
+    language: 'Python',
+    topics: ['ai', 'agent', 'developer-tools', 'coding', 'autonomous'],
+    owner: 'All-Hands-AI',
+    ownerAvatar: 'https://avatars.githubusercontent.com/u/167467290',
+    htmlUrl: 'https://github.com/All-Hands-AI/OpenHands',
+    homepage: 'https://openhands.com',
+    createdAt: '2024-02-20T00:00:00Z',
+    updatedAt: new Date(Date.now() - 30 * 60 * 1000).toISOString(),
+    starGrowth: { day: 128, week: 890, month: 3400 },
+    qualityScore: 96
+  },
+  {
+    id: 'gh2',
+    name: 'v0',
+    fullName: 'vercel/v0',
+    description: 'v0: Generative UI for the modern web - create beautiful interfaces with AI',
+    stars: 45800,
+    forks: 3100,
+    watchers: 590,
+    openIssues: 135,
+    language: 'TypeScript',
+    topics: ['ai', 'ui', 'generative-ui', 'react', 'nextjs'],
+    owner: 'vercel',
+    ownerAvatar: 'https://avatars.githubusercontent.com/u/14985020',
+    htmlUrl: 'https://github.com/vercel/v0',
+    homepage: 'https://v0.dev',
+    createdAt: '2023-10-15T00:00:00Z',
+    updatedAt: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
+    starGrowth: { day: 92, week: 640, month: 2600 },
+    qualityScore: 94
+  },
+  {
+    id: 'gh3',
+    name: 'LangChain',
+    fullName: 'langchain-ai/langchain',
+    description: '🦜️🔗 Building applications with LLMs through composability',
+    stars: 95600,
+    forks: 14500,
+    watchers: 1250,
+    openIssues: 590,
+    language: 'Python',
+    topics: ['llm', 'ai', 'nlp', 'langchain', 'agents'],
+    owner: 'langchain-ai',
+    ownerAvatar: 'https://avatars.githubusercontent.com/u/126733526',
+    htmlUrl: 'https://github.com/langchain-ai/langchain',
+    homepage: 'https://langchain.com',
+    createdAt: '2022-10-17T00:00:00Z',
+    updatedAt: new Date(Date.now() - 1 * 60 * 60 * 1000).toISOString(),
+    starGrowth: { day: 115, week: 780, month: 3100 },
+    qualityScore: 98
+  },
+  {
+    id: 'gh4',
+    name: 'SWE-agent',
+    fullName: 'princeton-nlp/SWE-agent',
+    description: 'SWE-agent: Agent for software engineering tasks',
+    stars: 16800,
+    forks: 1200,
+    watchers: 230,
+    openIssues: 85,
+    language: 'Python',
+    topics: ['ai', 'agent', 'software-engineering', 'coding'],
+    owner: 'princeton-nlp',
+    ownerAvatar: 'https://avatars.githubusercontent.com/u/11358726',
+    htmlUrl: 'https://github.com/princeton-nlp/SWE-agent',
+    homepage: 'https://swe-agent.com',
+    createdAt: '2024-03-15T00:00:00Z',
+    updatedAt: new Date(Date.now() - 4 * 60 * 60 * 1000).toISOString(),
+    starGrowth: { day: 72, week: 480, month: 1800 },
+    qualityScore: 92
+  },
+  {
+    id: 'gh5',
+    name: 'transformers',
+    fullName: 'huggingface/transformers',
+    description: '🤗 Transformers: State-of-the-art Machine Learning for Pytorch, TensorFlow, and JAX',
+    stars: 132000,
+    forks: 26500,
+    watchers: 1900,
+    openIssues: 720,
+    language: 'Python',
+    topics: ['nlp', 'machine-learning', 'deep-learning', 'transformers'],
+    owner: 'huggingface',
+    ownerAvatar: 'https://avatars.githubusercontent.com/u/25720743',
+    htmlUrl: 'https://github.com/huggingface/transformers',
+    homepage: 'https://huggingface.co/transformers',
+    createdAt: '2018-10-29T00:00:00Z',
+    updatedAt: new Date(Date.now() - 15 * 60 * 1000).toISOString(),
+    starGrowth: { day: 68, week: 420, month: 1600 },
+    qualityScore: 99
+  }
+];
+
+export const mockModels: Model[] = [
+  {
+    id: 'm1',
+    name: 'GPT-6',
+    provider: 'OpenAI',
+    type: 'multimodal',
+    description: 'OpenAI 最新一代旗舰模型，代号 Spud，5-6万亿参数 MoE 架构，支持 200万 Token 上下文窗口。',
+    releaseDate: '2026-04-14',
+    capabilities: ['文本生成', '图像理解', '音频', '代码生成', '推理', '多模态', 'Agent'],
+    performance: { mmlu: 96.2, humaneval: 94.8, gsm8k: 98.5, 'Visual QA': 92.3 },
+    apiUrl: 'https://openai.com/blog',
+    isRecommended: true,
+    qualityScore: 99
+  },
+  {
+    id: 'm2',
+    name: 'MiniMax M2.7',
+    provider: 'MiniMax',
+    type: 'open',
+    description: 'MiniMax 首个具备自我进化能力的大模型，全球开源，SWE-Pro 测试 56.22% 正确率。',
+    releaseDate: '2026-04-12',
+    capabilities: ['文本生成', '代码生成', '推理', '自我进化'],
+    performance: { mmlu: 89.5, humaneval: 88.2, 'SWE-Pro': 56.22, 'GDPval-AA': 92.1 },
+    githubUrl: 'https://github.com/MiniMax',
+    isRecommended: true,
+    qualityScore: 95
+  },
+  {
+    id: 'm3',
+    name: 'Gemma 4',
+    provider: 'Google',
+    type: 'open',
+    description: 'Google DeepMind 最新开源模型系列，Apache 2.0 许可证，四个模型覆盖从数据中心到口袋。',
+    releaseDate: '2026-04-02',
+    capabilities: ['文本生成', '代码生成', '多模态', '长上下文'],
+    performance: { mmlu: 91.8, humaneval: 87.5, gsm8k: 90.2, 'Arena.ai': 1452 },
+    githubUrl: 'https://github.com/google-deepmind/gemma',
+    isRecommended: true,
+    qualityScore: 97
+  },
+  {
+    id: 'm4',
+    name: 'MAI-Transcribe-1',
+    provider: 'Microsoft',
+    type: 'open',
+    description: 'Microsoft 自研语音识别模型，在 25 种语言上击败 Whisper，平均词错率 3.8% WER。',
+    releaseDate: '2026-04-03',
+    capabilities: ['语音识别', '多语言', '转录'],
+    performance: { 'FLEURS WER': 3.8, 'Languages': 25 },
+    apiUrl: 'https://www.microsoft.com/en-us/research/blog',
+    isRecommended: true,
+    qualityScore: 93
+  },
+  {
+    id: 'm5',
+    name: 'Qwen3.6 Plus',
+    provider: 'Alibaba',
+    type: 'open',
+    description: '阿里通义千问最新模型，以 4.6 万亿 Token 周调用量登顶 OpenRouter 全球榜首。',
+    releaseDate: '2026-03-28',
+    capabilities: ['文本生成', '代码生成', '多语言', '中文'],
+    performance: { mmlu: 88.5, humaneval: 82.3, gsm8k: 86.7 },
+    githubUrl: 'https://github.com/QwenLM/Qwen',
+    isRecommended: true,
+    qualityScore: 91
+  }
+];
+
+export const mockTrendingTopics: TrendingTopic[] = [
+  {
+    id: 't1',
+    title: 'GPT-6 与新一代大模型',
+    description: 'GPT-6 发布引领大模型技术进入新纪元，5-6万亿参数成为新标杆',
+    score: 100,
+    relatedItemIds: ['1'],
+    startedAt: new Date('2026-04-09').toISOString(),
+    peakedAt: new Date(Date.now() - 1 * 60 * 60 * 1000).toISOString(),
+    trend: 'hot'
+  },
+  {
+    id: 't2',
+    title: '开源模型生态爆发',
+    description: 'MiniMax M2.7、Gemma 4 等高质量开源模型推动 AI 技术民主化',
+    score: 96,
+    relatedItemIds: ['2', '3'],
+    startedAt: new Date('2026-04-02').toISOString(),
+    peakedAt: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
+    trend: 'rising'
+  },
+  {
+    id: 't3',
+    title: 'AI 编程 Agent',
+    description: '自主 AI 编程助手和 Agent 系统快速发展，显著提升开发者效率',
+    score: 92,
+    relatedItemIds: [],
+    startedAt: new Date('2026-04-01').toISOString(),
+    peakedAt: new Date(Date.now() - 4 * 60 * 60 * 1000).toISOString(),
+    trend: 'rising'
+  },
+  {
+    id: 't4',
+    title: '多模态语音 AI',
+    description: 'Microsoft MAI 等语音模型在多语言识别上取得重大突破',
+    score: 88,
+    relatedItemIds: ['4'],
+    startedAt: new Date('2026-04-03').toISOString(),
+    peakedAt: new Date(Date.now() - 6 * 60 * 60 * 1000).toISOString(),
+    trend: 'rising'
+  }
+];
